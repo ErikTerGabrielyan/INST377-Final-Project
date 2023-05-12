@@ -21,10 +21,8 @@ $(document).ready(function() {
       console.log(data.length)
       // Check if the request was successful
       if (data && searchType === "course") {
-          // Get the first course in the response
           var course = data;
 
-          // Get the course title and average GPA
           var title = course.title;
           var description = course.description;
           var credits = course.credits;
@@ -32,7 +30,6 @@ $(document).ready(function() {
           var professors = course.professors;
           gpa = Math.round(gpa * 100) / 100
 
-          // Display the title and GPA in the results div
           $('#results').html(`Course Title: ${title}<br>Description: ${description}<br>Credits: ${credits}<br>Average GPA: ${gpa}<br>Professors: ${professors}`);
         } else if (data && searchType !== "course") {
           var professor = data;

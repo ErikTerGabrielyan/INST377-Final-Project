@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>UMD Sleuth</title>
+	<title>UMD Search AiO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<header>
 		<div class="logo">
-			<img src="logolast.png" alt="UMD Sleuth logo" width="300" height="300">
+			<img src="logolast.png" alt="UMD Sleuth logo">
 		</div>
 		<nav>
-			<ul>
+			<ul class="center">
 				<li><a href="index.html">Search</a></li>
 				<li><a href="about.html">About</a></li>
 			</ul>
@@ -19,28 +20,28 @@
 
 	<main>
         <div class="search-info">
-			<h2>Search UMD Courses and Professors</h2>
+            <h2>Search UMD Courses and Professors</h2>
             <p>
             Select either 'Courses' or 'Professors' from the dropdown to enable searches for whichever one you wish.
             <br>If searching for courses, search for the course ID. For example: MATH140, INST377
             <br>If searching for a professor, make sure to search for the professor's full first and last name, with spaces in between. For example: Erik Ter-Gabrielyan
             </p>
-		</div>
-		<h2>Search</h2>
-		<form>
-			<label for="search-type">Search for:</label>
-			<select id="search-type">
-				<option value="course">Courses</option>
-				<option value="professor">Professors</option>
-			</select>
-			<label for="search-input">Search:</label>
-			<input type="text" id="search-input" name="search-input">
-			<button type="submit">Search</button>
-		</form>
-		<div id="results">
-			<!-- Search results will be displayed here -->
-		</div>
-	</main>
+        </div>
+        <h2>Search</h2>
+        <form>
+            <label for="search-type">Search for:</label>
+            <select id="search-type">
+                <option value="course">Courses</option>
+                <option value="professor">Professors</option>
+            </select>
+            <label for="search-input">Search:</label>
+            <input type="text" id="search-input" name="search-input">
+            <button type="submit">Search</button>
+        </form>
+        <div id="results" class="results-container">
+            <!-- Search results will be displayed here -->
+        </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
